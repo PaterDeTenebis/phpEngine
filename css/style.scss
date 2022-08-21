@@ -1,0 +1,707 @@
+/* Imports */
+
+@import"./variables";
+@import"./mixins";
+
+/* Utils */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    button {
+        border: none;
+        background: none;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.textBlack {
+    color: #000;
+}
+
+.textWhite {
+    color: #fff;
+    z-index: 2;
+}
+
+.textGolden {
+    color: #F6EAA4;
+}
+
+.textGray {
+    color: #949494;
+}
+
+button.headAuth_item {
+    background: #3C7FEE80;
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    color: #6A6A6E;
+    font-size: 16px;
+    transition: .2s;
+    color: #fff;
+    
+    font-family: 'RoadRadio';
+    &:hover {
+        background: linear-gradient(to right, #3C7FEE, #0D67FB);
+    }
+}
+
+.heading {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'RoadRadio';
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.textG {
+    position: absolute;
+    z-index: 1;
+    color: #0C0F16;
+    font-size: 75px;
+    top: -40px;
+}
+
+button.navbar-toggler {
+    color: #fff;
+}
+
+button.btnMain {
+    border-radius: 9px;
+    background: rgb(246,234,164);
+    background: radial-gradient(121.33% 1744% at 0% 0%, #3C7FEE 0%, #0D67FB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 0px 4px 0px #0D3470;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'RoadRadio';
+    transition: .2s;
+    padding: 15px 15px;
+    margin-top: 10px;
+    &:hover {
+        text-shadow: 0px 0px 5px #fff;
+    }
+}
+
+.about_main_item_holder {
+    position: relative;
+}
+
+.safe1, .safe2 {
+    position: absolute;
+}
+
+.safe1 {
+    width: 99px;
+    height: 103px;
+    top: 10px;
+    left: -50px;
+}
+
+.safe2 {
+    height: 160px;
+    width: 100px;
+    bottom: 0px;
+    right: 0px;
+}
+
+button.watchPres {
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    background: linear-gradient(to right, #16181c, #50555c);
+    backdrop-filter: blur(60px);
+    color: #fff;
+    position: absolute;
+    left: -40px;
+    top: 35%;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #000;
+    bottom: -80px;
+    top: unset;
+}
+
+.carousel-control-next {
+    right: 45%;
+}
+
+.carousel-control-prev {
+    left: 45%;
+}
+
+.roadmap_item_icon {
+    width: 175px;
+    height: 175px;
+    border-radius: 100%;
+    border: 18px solid #E2D18C;
+    background: linear-gradient(to bottom right, #151515, #282728);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 15px 15px 10px -6px #3C3829; 
+    box-shadow: 15px 15px 10px -6px #3C3829;
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 50px;
+        border: 1px dashed #E2D18C;
+        bottom: -90px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        background: #E2D18C;
+        bottom: -100px;
+        border-radius: 100%;
+    }
+}
+
+@keyframes wipe-enter {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.icon-transition {
+    animation-name: wipe-enter;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#icon1.icon-transition {
+    animation-delay: 1s;
+    &::before {
+        opacity: 0;
+        animation-name: wipe-enter;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 3.5s;
+    }
+}
+
+#icon2.icon-transition {
+    animation-delay: 1.5s;
+    &::before {
+        opacity: 0;
+        animation-name: wipe-enter;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 4s;
+    }
+}
+#icon3.icon-transition {
+    animation-delay: 2s;
+    &::before {
+        opacity: 0;
+        animation-name: wipe-enter;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 4.5s;
+    }
+}
+#icon4.icon-transition {
+    animation-delay: 2.5s;
+    &::before {
+        opacity: 0;
+        animation-name: wipe-enter;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 5s;
+    }
+}
+#icon5.icon-transition {
+    animation-delay: 3s;
+    &::before {
+        opacity: 0;
+        animation-name: wipe-enter;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 5.5s;
+    }
+}
+#text1.icon-transition {
+    animation-delay: 6s;
+}
+#text2.icon-transition {
+    animation-delay: 6.5s;
+}
+#text3.icon-transition {
+    animation-delay: 7s;
+}
+#text4.icon-transition {
+    animation-delay: 7.5s;
+}
+#text5.icon-transition {
+    animation-delay: 8s;
+}
+
+
+
+.logoMainWrapper {
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wellcome_top_img {
+    width: 354px;
+    height: 311px;
+    @include bgProps(url(../img/logoMainBack.png));
+    background-size: contain;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    
+}
+
+.logoLetter {
+    margin-top: 70px;
+    height: 271px;
+    width: 240px;
+}
+
+nav.navbar {
+    ul.navbar-nav {
+        margin: 0 auto;
+
+        a.nav-link {
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+    }
+    
+    .headAuth {
+        margin-left: auto;
+
+        
+    }
+    .langs {
+        border: 2px solid #474747;
+        border-radius: 5px;
+        position: relative;
+        &::after {
+            content: '';
+            width: 26px;
+            height: 16px;
+            position: absolute;
+            right: -35px;
+            top: 10px;
+            @include bgProps(url(../img/ruFlag.png));
+        }
+
+        .dropdown {
+            background: none;
+            border: none;
+            text-transform: uppercase;
+            color: #fff;
+
+            .custom-select {
+                background: none;
+                border: none;
+                color: #fff;
+                text-transform: uppercase;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+.socials {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+
+    .socials_item {
+        width: 25px;
+        height: 25px;
+        background: #393939;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .2s;
+        &:hover {
+            background: rgb(246,234,164);
+            background: radial-gradient(circle, rgba(246,234,164,1) 41%, rgba(194,170,103,1) 100%);
+            -webkit-box-shadow: 0px 0px 20px 2px #5F5A41!important; 
+            box-shadow: 0px 0px 20px 2px #5F5A41!important;
+        }
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+
+        a {
+            color: #000;
+            &:hover {color: #000;}
+        }
+    }
+}
+a.navbar-brand {
+    display: flex;
+    align-items: center;
+    span {
+        font-family: 'Brolink';
+        color: #fff;
+        font-size: 13px;
+        line-height: 1;
+        text-shadow: 0px 0px 10px #0D67FB;
+        margin-top: 3px;
+    }
+    
+    &:hover {
+        color: #fff;
+    }
+}
+.logo {
+    width: 50px;
+    height: 45px;
+}
+
+/* Section Styles */
+
+section.face {
+    @include bgProps(url(../img/faceBg.png));
+    padding-bottom: 66px;
+    background-color: #07080b;
+    .wellcome {
+        margin-top: 50px;
+        .sloganTop {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            span.sloganTop_text {
+                font-size: 20px;
+                color: #fff;
+                font-family: 'RoadRadio';
+            }
+        }
+        .wellcome_top {
+            display: flex;
+            justify-content: space-between;
+            
+
+            .wellcome_top_holder {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .wellcome_top_feature {
+                    margin-top: 15px;
+                    display: flex;
+                    border-radius: 9px;
+                    background: radial-gradient(169.74% 2056.79% at 125.33% 144.74%, rgba(255, 255, 255, 0.1) 32.92%, rgba(255, 255, 255, 0) 100%) ;
+                    padding: 23px;
+                    align-items: center;
+                    
+                    font-size: 13px;
+                    text-align-last: left;
+                    color: #fff;
+                    &:hover {
+                        .wellcome_top_feature_img {
+                            border: 2px solid #0D67FB;
+                            -webkit-box-shadow: 0px 0px 20px 2px #0D67FB!important; 
+                            box-shadow: 0px 0px 20px 2px #0D67FB!important;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .wellcome_top_feature_img {
+                        width: 35px;
+                        height: 35px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 10px;
+                        border-radius: 100%;
+                        background: linear-gradient(137.32deg, rgba(255, 255, 255, 0.05) -4.86%, rgba(255, 255, 255, 0) 110.61%);
+                        box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.15);
+                        backdrop-filter: blur(60px);
+                        transition: .2s;
+                    }
+                }
+            }
+        }
+        .wellcome_bot {
+            margin-top: 40px;
+            .wellcome_bot_slogan {
+                text-align: center;
+                background: #3F81EE;
+                padding: 10px;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                span {
+                    font-size: 50px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-family: 'RoadRadio';
+                    line-height: 1;
+                }
+            }
+            .wellcome_bot_manText {
+                margin-top: 10px;
+                text-align: center;
+                span {
+                    text-transform: uppercase;
+                    font-size: 50px;
+                    color: #fff;
+                    line-height: 1;
+                }
+            }
+            .wellcome_bot_btn {
+                margin-top: 50px;
+                display: flex;
+                justify-content: center;
+                button.btnMain {
+                    width: 359px;
+                    height: 95px;
+                    border-radius: 9px;
+                    background: radial-gradient(121.33% 1744% at 0% 0%, #3C7FEE 0%, #0D67FB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+                    box-shadow: 0px 4px 0px #0D3470;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-weight: bold;
+                }
+            }
+            .socials {
+                margin-top: 60px;
+                display: flex;
+                justify-content: center;
+
+                .socials_item {
+                    width: 25px;
+                    height: 25px;
+                    background: #393939;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:hover {
+                        background: rgb(246,234,164);
+                        background: radial-gradient(circle, rgba(246,234,164,1) 41%, rgba(194,170,103,1) 100%);
+                    }
+                    &:not(:first-child) {
+                        margin-left: 20px;
+                    }
+
+                    a {
+                        color: #000;
+                        &:hover {color: #000;}
+                    }
+                }
+            }
+        }
+    }
+
+    header.header {
+        padding-top: 10px;
+        nav.navbar {
+            ul.navbar-nav {
+                margin: 0 auto;
+
+                a.nav-link {
+                    color: #fff;
+                    font-size: 14px;
+                }
+            }
+            
+            .headAuth {
+                margin-left: auto;
+
+                button.headAuth_item {
+                    background: #3C7FEE80;
+                    border: none;
+                    padding: 20px;
+                    border-radius: 5px;
+                    color: #6A6A6E;
+                    font-size: 16px;
+                    transition: .2s;
+                    color: #fff;
+                    
+                    font-family: 'RoadRadio';
+                    &:hover {
+                        background: linear-gradient(to right, #3C7FEE, #0D67FB);
+                    }
+                }
+            }
+            .langs {
+                border: 2px solid #474747;
+                border-radius: 5px;
+                position: relative;
+                &::after {
+                    content: '';
+                    width: 26px;
+                    height: 16px;
+                    position: absolute;
+                    right: -35px;
+                    top: 10px;
+                    @include bgProps(url(../img/ruFlag.png));
+                }
+
+                .dropdown {
+                    background: none;
+                    border: none;
+                    text-transform: uppercase;
+                    color: #fff;
+
+                    .custom-select {
+                        background: none;
+                        border: none;
+                        color: #fff;
+                        text-transform: uppercase;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.about {
+    padding-top: 130px;
+    padding-bottom: 50px;
+    background-color: #07080b;
+    @include bgProps(url(../img/blueLight.png));
+    background-position: right;
+    background-size: contain;
+    .about_main {
+        display: flex;
+        justify-content: space-between;
+
+        .about_main_item {
+            width: 46%;
+            font-size: 16px;
+            
+        }
+    }
+}
+
+section.contacts {
+    padding-top: 130px;
+    padding-bottom: 50px;
+    background-color: #07080b;
+
+    .contacts_main {
+        padding: 60px 80px;
+        border-radius: 15px;
+        background: radial-gradient(98.4% 1125.15% at 8.16% 13.81%, rgba(17, 22, 31, 0.37) 0%, rgba(15, 20, 29, 0) 100%);
+        overflow: hidden;
+        display: flex;
+        position: relative;
+        .contacts_img {
+            position: absolute;
+        }
+
+        #tg1 {
+            bottom: -120px;
+            z-index: 4;
+            right: -90px;
+
+            img {
+                height: 250px;
+                width: 250px;
+            }
+        }
+
+        .contacts_main_side {
+            position: relative;
+            .cText {
+                font-family: 'RoadRadio';
+                font-size: 30px;
+                text-transform: uppercase;
+                color: #fff;
+                line-height: 1;
+            }
+
+            .contacts_img {
+                position: absolute;
+            }
+
+            #tg2 {
+                top: 10px;
+                right: -130px;
+                z-index: 3;
+
+                img {
+                    height: 160px;
+                    width: 180px;
+                }
+            }
+
+            button.watchPres {
+                position: relative;
+                margin-left: 50px;
+                margin-top: -30px;
+            }
+        }
+    }
+}
+
+
+
+footer {
+    background: #000;
+    padding: 35px;
+    .footer_bot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .socials {
+            margin-top: 0;
+        }
+    }
+}
+
+/* Mediaqueries */
+
+@import"./mediaqueries";
