@@ -14,10 +14,19 @@ session_start();
 if (file_exists('all/' . $page . '.php')) {
     include 'all/' . $page . '.php';
 } else if ($_SESSION['ulogin'] != 1 and file_exists('guest/' . $page . '.php')) {
-    include 'guest' . $page . '.php';
+    include 'guest/' . $page . '.php';
 } else if ($_SESSION['ulogin'] == 1 and file_exists('auth/' . $page . '.php')) {
     include 'auth/' . $page . '.php';
 } else {
     exit('Page not found');
 }
 
+function message($text)
+{
+    exit('{"message" : "' . $text . '"}');
+}
+
+function go($url)
+{
+    exit('{"go" : "' . $url . '"}');
+}

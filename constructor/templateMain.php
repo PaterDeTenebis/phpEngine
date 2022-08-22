@@ -1,4 +1,4 @@
-<?php 
+<?php
 function top($title)
 {
     echo '<!DOCTYPE html>
