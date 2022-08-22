@@ -3,7 +3,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'RoadRadio', sans-serif;
+  font-weight: 300;
+	font-style: normal;
 }
 
 body a {
@@ -41,7 +43,7 @@ body button:focus {
   color: #949494;
 }
 
-button.headAuth_item {
+a.headAuth_item {
   background: #3C7FEE80;
   border: none;
   padding: 20px;
@@ -51,10 +53,9 @@ button.headAuth_item {
   -webkit-transition: .2s;
   transition: .2s;
   color: #fff;
-  font-family: 'RoadRadio';
 }
 
-button.headAuth_item:hover {
+a.headAuth_item:hover {
   background: -webkit-gradient(linear, left top, right top, from(#3C7FEE), to(#0D67FB));
   background: linear-gradient(to right, #3C7FEE, #0D67FB);
 }
@@ -63,7 +64,6 @@ button.headAuth_item:hover {
   font-size: 36px;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: 'RoadRadio';
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,7 +100,6 @@ button.btnMain {
   text-transform: uppercase;
   color: #fff;
   font-weight: bold;
-  font-family: 'RoadRadio';
   -webkit-transition: .2s;
   transition: .2s;
   padding: 15px 15px;
@@ -501,12 +500,12 @@ a.navbar-brand {
 }
 
 a.navbar-brand span {
-  font-family: 'Brolink';
   color: #fff;
   font-size: 13px;
   line-height: 1;
   text-shadow: 0px 0px 10px #0D67FB;
   margin-top: 3px;
+  text-transform: uppercase;
 }
 
 a.navbar-brand:hover {
@@ -549,7 +548,6 @@ section.face .wellcome .sloganTop {
 section.face .wellcome .sloganTop span.sloganTop_text {
   font-size: 20px;
   color: #fff;
-  font-family: 'RoadRadio';
 }
 
 section.face .wellcome .wellcome_top {
@@ -644,7 +642,6 @@ section.face .wellcome .wellcome_bot .wellcome_bot_slogan span {
   font-size: 50px;
   color: #fff;
   text-transform: uppercase;
-  font-family: 'RoadRadio';
   line-height: 1;
 }
 
@@ -742,7 +739,7 @@ section.face header.header nav.navbar .headAuth {
   margin-left: auto;
 }
 
-section.face header.header nav.navbar .headAuth button.headAuth_item {
+section.face header.header nav.navbar .headAuth a.headAuth_item {
   background: #3C7FEE80;
   border: none;
   padding: 20px;
@@ -752,10 +749,9 @@ section.face header.header nav.navbar .headAuth button.headAuth_item {
   -webkit-transition: .2s;
   transition: .2s;
   color: #fff;
-  font-family: 'RoadRadio';
 }
 
-section.face header.header nav.navbar .headAuth button.headAuth_item:hover {
+section.face header.header nav.navbar .headAuth a.headAuth_item:hover {
   background: -webkit-gradient(linear, left top, right top, from(#3C7FEE), to(#0D67FB));
   background: linear-gradient(to right, #3C7FEE, #0D67FB);
 }
@@ -857,7 +853,6 @@ section.contacts .contacts_main .contacts_main_side {
 }
 
 section.contacts .contacts_main .contacts_main_side .cText {
-  font-family: 'RoadRadio';
   font-size: 30px;
   text-transform: uppercase;
   color: #fff;

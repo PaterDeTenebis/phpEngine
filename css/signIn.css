@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.signIn_main {
+  background-image: url(../img/faceBg.png);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.signIn_main h1 {
+  margin-bottom: 80px;
+  text-transform: uppercase;
+  color: #F6EAA4;
+  font-weight: bold;
+  text-shadow: 0px 0px 40px #F6EAA4;
+}
+
+.signIn_main .nav-tabs {
+  border-color: #F6EAA4;
+}
+
+.signIn_main .signIn_card {
+  width: 40%;
+  height: auto;
+  padding: 30px;
+  border-radius: 9px;
+  background: #000;
+  border: 1px solid #F6EAA4;
+  -webkit-box-shadow: 0px 0px 40px #F6EAA4;
+          box-shadow: 0px 0px 40px #F6EAA4;
+}
+
+.signIn_main .signIn_card li.nav-item {
+  background: #000;
+}
+
+.signIn_main .signIn_card li.nav-item a.nav-link {
+  color: #F6EAA4;
+}
+
+.signIn_main .signIn_card li.nav-item a.nav-link.active {
+  background: #030304;
+  border: 1px solid #F6EAA4;
+}
+
+.signIn_main .signIn_card .signIn_card_input {
+  margin: 10px 0;
+}
+
+.signIn_main .signIn_card .signIn_card_input input {
+  width: 100%;
+  height: 50px;
+  border: 2px solid #2b2b2b;
+  background: none;
+  border-radius: 9px;
+  margin-top: 10px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  color: #fff;
+  padding: 10px;
+}
+
+.signIn_main .signIn_card .signIn_card_input input:hover, .signIn_main .signIn_card .signIn_card_input input :focus {
+  border-color: #F6EAA4;
+}
+
+.signIn_main .signIn_card .signIn_card_input input:focus {
+  border-color: #F6EAA4;
+  outline: none;
+  -webkit-box-shadow: 0px 0px 10px #F6EAA4;
+          box-shadow: 0px 0px 10px #F6EAA4;
+}
+
+.signIn_main .signIn_card .signIn_card_input span {
+  color: #F6EAA4;
+}
+
+.signIn_main .signIn_card .signIn_card_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+
+.signIn_main .signIn_card .signIn_card_btn button.btnMain {
+  width: 50%;
+  border: none;
+  height: 50px;
+}
+
+button.btnMain {
+  border-radius: 9px;
+  background: #f6eaa4;
+  background: radial-gradient(circle, #f6eaa4 41%, #c2aa67 100%);
+  -webkit-box-shadow: 0px 15px 10px -6px #5F5A41;
+  box-shadow: 0px 15px 10px -6px #5F5A41;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: bold;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+button.btnMain:hover {
+  -webkit-box-shadow: 0px 0px 20px 2px #5F5A41 !important;
+  box-shadow: 0px 0px 20px 2px #5F5A41 !important;
+  background: radial-gradient(circle, #c2aa67 41%, #f6eaa4 100%) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .signIn_main h1 {
+    font-size: 30px;
+  }
+  .signIn_main .signIn_card {
+    width: 95%;
+  }
+  .signIn_main .signIn_card .signIn_card_btn button.btnMain {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=signIn.css.map */

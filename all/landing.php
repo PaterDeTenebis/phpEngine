@@ -18,21 +18,17 @@ top('Landing Page');
                             <a class="nav-link" href="#">Главная</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">О Нас</a>
+                            <a class="nav-link" href="#about">О Нас</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Контакты</a>
+                            <a class="nav-link" href="#contacts">Контакты</a>
                         </li>
                     </ul>
                     <div class="headAuth">
-                        <button class="headAuth_item">
-                            Вход
-                        </button>
-
-                        <button class="headAuth_item">
-                            Регистрация
-                        </button>
+                        <a class="headAuth_item" href="/signIn">
+                            Авторизация
+                        </a>
                     </div>
 
                 </div>
@@ -99,7 +95,7 @@ top('Landing Page');
         </div>
     </div>
 </section>
-<section class="about">
+<section class="about" id="about">
     <div class="container">
         <div class="heading">
             <span class="textG">
@@ -133,7 +129,7 @@ top('Landing Page');
         </div>
     </div>
 </section>
-<section class="contacts">
+<section class="contacts" id="contacts">
     <div class="container">
         <div class="heading">
             <span class="textG">
