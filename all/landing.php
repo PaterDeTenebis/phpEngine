@@ -29,6 +29,9 @@ top('Landing Page');
                         <a class="headAuth_item" href="/signIn">
                             Авторизация
                         </a>
+                        <a class="headAuth_item" href="/register">
+                            Регистрация
+                        </a>
                     </div>
 
                 </div>

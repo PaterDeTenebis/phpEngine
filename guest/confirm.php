@@ -18,8 +18,8 @@ top('Confirmation');
                     <input type="text" id="code">
                 </div>
                 <div class="signIn_card_input">
-                    <span>Капча</span>
-                    <input type="text" placeholder="Question" id="question">
+                    <span>Введите ответ на вопрос:</span>
+                    <input type="text" placeholder="<? questionShow() ?>" id="question">
                 </div>
                 <div class="signIn_card_btn">
                     <button class="btnMain" onclick="postQuery('gForm', 'confirm', 'code.question')">

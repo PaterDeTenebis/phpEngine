@@ -18,8 +18,8 @@ top('Recover Password');
                     <input type="text" id="EMail">
                 </div>
                 <div class="signIn_card_input">
-                    <span>Капча</span>
-                    <input type="text" placeholder="Question" id="question">
+                    <span>Введите ответ на вопрос:</span>
+                    <input type="text" placeholder="<? questionShow() ?>" id="question">
                 </div>
                 <div class="signIn_card_btn">
                     <button class="btnMain" onclick="postQuery('gForm', 'recovery', 'EMail.question')">

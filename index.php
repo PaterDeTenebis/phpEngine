@@ -30,3 +30,33 @@ function go($url)
 {
     exit('{"go" : "' . $url . '"}');
 }
+
+function questionShow()
+{
+    $questions = array(
+        1 => 'Столица Украины?',
+        2 => 'Столица США?',
+        3 => 'Столица Англии?',
+        4 => 'Столица Франции?',
+        5 => 'Столица Германии?',
+    );
+
+    $num = mt_rand(1, count($questions));
+    $_SESSION['question'] = $num;
+    echo $questions[$num];
+}
+
+function questionValidator()
+{
+    $answers = array(
+        1 => 'киев',
+        2 => 'вашингтон',
+        3 => 'лондон',
+        4 => 'париж',
+        5 => 'берлин',
+    );
+
+    if ($_SESSION['question'] != array_search(strtolower($_POST['question']), $answers)) {
+        message('Ответ не верный');
+    }
+}
