@@ -1,0 +1,96 @@
+@font-face {
+	font-family: 'Gotham Pro', sans-serif;
+	src: url('../fonts/GohamPro/GOTHAPROMED.otf');
+	src: local('../fonts/GohamPro/GOTHAPROMED.otf'), local('GOTHAPROMED'),
+		url('../fonts/GohamPro/GOTHAPROMED.otf') format('otf');
+
+		
+	font-style: normal;
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GohamPro/GothamPro-Bold.eot');
+	src: local('../fonts/GohamPro/Gotham Pro Bold'), local('GothamPro-Bold'),
+		url('../fonts/GohamPro/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GohamPro/GothamPro-Bold.woff') format('woff'),
+		url('../fonts/GohamPro/GothamPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GohamPro/GothamPro.eot');
+	src: local('../fonts/GohamPro/Gotham Pro'), local('GothamPro'),
+		url('../fonts/GohamPro/GothamPro.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GohamPro/GothamPro.woff') format('woff'),
+		url('../fonts/GohamPro/GothamPro.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GohamPro/GothamPro.eot');
+	src: local('../fonts/GohamPro/Gotham Pro-Light'), local('GothamPro-Light'),
+		url('../fonts/GohamPro/GothamProLig.otf') format('otf');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'RoadRadio';
+	src: url('../fonts/RoadRadio/RoadRadio-Thin.eot');
+	src: local('../fonts/RoadRadio/RoadRadio-Thin'),
+		url('../fonts/RoadRadio/RoadRadio-Thin.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/RoadRadio/RoadRadio-Thin.woff') format('woff'),
+		url('../fonts/RoadRadio/RoadRadio-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'RoadRadio';
+	src: url('../fonts/RoadRadio/RoadRadio-Light.eot');
+	src: local('../fonts/RoadRadio/RoadRadio-Light'),
+		url('../fonts/RoadRadio/RoadRadio-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/RoadRadio/RoadRadio-Light.woff') format('woff'),
+		url('../fonts/RoadRadio/RoadRadio-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'RoadRadio';
+	src: url('../fonts/RoadRadio/RoadRadio-Black.eot');
+	src: local('../fonts/RoadRadio/RoadRadio-Black'),
+		url('../fonts/RoadRadio/RoadRadio-Black.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/RoadRadio/RoadRadio-Black.woff') format('woff'),
+		url('../fonts/RoadRadio/RoadRadio-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'RoadRadio';
+	src: url('../fonts/RoadRadio/RoadRadio-Bold.eot');
+	src: local('../fonts/RoadRadio/RoadRadio-Bold'),
+		url('../fonts/RoadRadio/RoadRadio-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/RoadRadio/RoadRadio-Bold.woff') format('woff'),
+		url('../fonts/RoadRadio/RoadRadio-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'RoadRadio';
+	src: url('../fonts/RoadRadio/RoadRadio.eot');
+	src: local('RoadRadio'),
+		url('../fonts/RoadRadio/RoadRadio.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/RoadRadio/RoadRadio.woff') format('woff'),
+		url('../fonts/RoadRadio/RoadRadio.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

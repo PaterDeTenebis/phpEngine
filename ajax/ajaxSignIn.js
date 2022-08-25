@@ -12,6 +12,7 @@ function postQuery(url, name, data) {
     success: function (result) {
       ans = jQuery.parseJSON(result);
       if (ans.go) {
+        console.log(ans);
         go(ans.go);
       } else {
         alert(ans.message);

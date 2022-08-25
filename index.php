@@ -8,17 +8,23 @@ if ($_SERVER['REQUEST_URI'] == '/') {
     }
 }
 
+$conn = mysqli_connect('localhost', 'serg', 'gK3gW2kE', 'testserg');
+
+if(!$conn) {
+    exit('MySQL Error!');
+}
+
 session_start();
 
 
 if (file_exists('all/' . $page . '.php')) {
     include 'all/' . $page . '.php';
-} else if ($_SESSION['ulogin'] != 1 and file_exists('guest/' . $page . '.php')) {
+} else if (!$_SESSION['id'] and file_exists('guest/' . $page . '.php')) {
     include 'guest/' . $page . '.php';
-} else if ($_SESSION['ulogin'] == 1 and file_exists('auth/' . $page . '.php')) {
+} else if ($_SESSION['id'] and file_exists('auth/' . $page . '.php')) {
     include 'auth/' . $page . '.php';
 } else {
-    exit('Page not found');
+    notFound();
 }
 
 function message($text)
@@ -29,6 +35,14 @@ function message($text)
 function go($url)
 {
     exit('{"go" : "' . $url . '"}');
+}
+
+function random_str($num = 30) {
+    return substr(str_shuffle('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'), 0, $num);
+}
+
+function notFound() {
+    exit('Page not found');
 }
 
 function questionShow()
@@ -59,4 +73,19 @@ function questionValidator()
     if ($_SESSION['question'] != array_search(strtolower($_POST['question']), $answers)) {
         message('Ответ не верный');
     }
+}
+
+function emailValidator() {
+    if(! filter_var($_POST['EMail'], FILTER_VALIDATE_EMAIL)) {
+        message('Wrong E-mail entered');
+    }
+}
+
+function passwordValidator() {
+    if(! preg_match('/^[A-z0-9]{10,30}$/ ', $_POST['password'])) {
+        message('Wrong password');
+    } else {
+        $_POST['password'] = md5($_POST['password']);
+    }
+
 }

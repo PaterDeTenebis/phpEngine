@@ -1,10 +1,15 @@
 <?php
 include 'constructor/templateSignIn.php';
 
+if(!$_SESSION['confirm']['code']) {
+    notFound();
+}
+
 top('Confirmation');
 ?>
 <div class="signIn_main">
     <h1>Подтверждение</h1>
+    <? echo $_SESSION['confirm']['code'];?>
     <div class="signIn_card">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
@@ -16,10 +21,6 @@ top('Confirmation');
                 <div class="signIn_card_input">
                     <span>Код</span>
                     <input type="text" id="code">
-                </div>
-                <div class="signIn_card_input">
-                    <span>Введите ответ на вопрос:</span>
-                    <input type="text" placeholder="<? questionShow() ?>" id="question">
                 </div>
                 <div class="signIn_card_btn">
                     <button class="btnMain" onclick="postQuery('gForm', 'confirm', 'code.question')">
