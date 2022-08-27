@@ -2,6 +2,7 @@
 include 'constructor/templateCabinet.php';
 
 top('Cabinet|Control Panel');
+sideBar();
 ?>
     <main class="main">
         <header>

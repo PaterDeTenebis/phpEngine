@@ -7,52 +7,55 @@ function top($title)
                 <meta charset="UTF-8">
                 <title>' . $title . '</title>
                 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-                <link rel="stylesheet" href="/../fonts/fonts.css?ver=0.1">
+                <link rel="stylesheet" href="/assetsCabinet/fonts/GothamPro/stylesheet.css?ver=0.1">
                 <link rel="stylesheet" href="/assetsCabinet/css/fa-svg-with-js.min.css">
                 <link rel="stylesheet" href="/assetsCabinet/css/style.css?ver=0.1">
             </head>
-            <body>
-                <aside class="sidebar">
-                    <div class="logo">
-                        <a href="#"><img src="img/logo.png" alt="logo"></a>
-                        <button class="sbCloser"><i class="fas fa-times"></i></button>
+            <body>';
+}
+function sideBar() {
+    echo '
+        <aside class="sidebar">
+            <div class="logo">
+                <a href="#"><img src="img/logo.png" alt="logo"></a>
+                <button class="sbCloser"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="sidebar_menu">
+                <div class="sidebar_menu_heading">
+                    <span>Меню</span>
+                </div>
+                <div class="sidebar_menu_item">
+                    <div class="sidebar_menu_item_img"><img src="img/options.png" alt="options"></div>
+                    <div class="sidebar_menu_item_text"><a href="#" >Панель управления</a></div>
+                </div>
+                <div class="sidebarDrop">
+                    <div class="sidebar_menu_item ">
+                        <div class="sidebar_menu_item_img"><img src="img/wallet.png" alt="organization"></div>
+                        <div class="sidebar_menu_item_text"><a href="#" >Кошелек</a></div>
+                        
                     </div>
-                    <div class="sidebar_menu">
-                        <div class="sidebar_menu_heading">
-                            <span>Меню</span>
-                        </div>
-                        <div class="sidebar_menu_item">
-                            <div class="sidebar_menu_item_img"><img src="img/options.png" alt="options"></div>
-                            <div class="sidebar_menu_item_text"><a href="#" >Панель управления</a></div>
-                        </div>
-                        <div class="sidebarDrop">
-                            <div class="sidebar_menu_item ">
-                                <div class="sidebar_menu_item_img"><img src="img/wallet.png" alt="organization"></div>
-                                <div class="sidebar_menu_item_text"><a href="#" >Кошелек</a></div>
-                                
-                            </div>
-                            <ul class="sidebar_menu_item_list">
-                                <li><a href="#">Пополнение</a></li>
-                                <li><a href="#">Перевод</a></li>
-                                <li><a href="#">Вывод</a></li>
-                            </ul>
-                        </div>
-                        <div class="sidebar_menu_item">
-                            <div class="sidebar_menu_item_img"><img src="img/user.png" alt="user"></div>
-                            <div class="sidebar_menu_item_text"><a href="#" >Профиль</a></div>
-                        </div>
-                        <div class="sidebar_menu_item">
-                            <div class="sidebar_menu_item_img"><img src="img/log-out.png" alt="log out"></div>
-                            <div class="sidebar_menu_item_text"><a href="#" >Выход</a></div>
-                        </div>
-                    </div>
-                    <div class="tgChannel_sb">
-                        <a href="#" class="tgLink textCommon textLight">Telegram channel <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="copyright">
-                        <span>© 2022 All Rights Reserved</span>
-                    </div>
-                </aside>';
+                    <ul class="sidebar_menu_item_list">
+                        <li><a href="#">Пополнение</a></li>
+                        <li><a href="#">Перевод</a></li>
+                        <li><a href="#">Вывод</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar_menu_item">
+                    <div class="sidebar_menu_item_img"><img src="img/user.png" alt="user"></div>
+                    <div class="sidebar_menu_item_text"><a href="#" >Профиль</a></div>
+                </div>
+                <div class="sidebar_menu_item">
+                    <div class="sidebar_menu_item_img"><img src="img/log-out.png" alt="log out"></div>
+                    <div class="sidebar_menu_item_text"><a href="/" >Выход</a></div>
+                </div>
+            </div>
+            <div class="tgChannel_sb">
+                <a href="#" class="tgLink textCommon textLight">Telegram channel <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="copyright">
+                <span>© 2022 All Rights Reserved</span>
+            </div>
+        </aside>';
 }
 
 function bottom()
