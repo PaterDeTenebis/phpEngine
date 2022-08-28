@@ -5,6 +5,21 @@
   position: absolute;
 }
 
+.justify-content-between {
+  -ms-flex-pack: justify!important;
+  justify-content: space-between!important;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap!important;
+  flex-wrap: wrap!important;
+}
+
+.d-flex {
+  display: -ms-flexbox!important;
+  display: flex!important;
+}
+
 .cardLong {
   width: 100% !important;
   padding: 30px;
@@ -1385,6 +1400,7 @@ main header .langs select:hover {
 
 main .content {
   padding: 10px 50px;
+  min-height: 92.5vh;
 }
 
 @media screen and (max-width: 1540px) {
@@ -1576,4 +1592,3 @@ main .content {
     margin: 10px 0;
   }
 }
-/*# sourceMappingURL=style.css.map */

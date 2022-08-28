@@ -2,7 +2,6 @@
 include 'constructor/templateCabinet.php';
 
 top('Cabinet|Control Panel');
-sideBar();
 ?>
     <main class="main">
         <header>
@@ -65,7 +64,7 @@ sideBar();
                             </div>
                         </div>
                         <div class="dBigHolder">
-                            <img src="img/dBig.png" alt="">
+                            <img src="/assetsCabinet/img/dBig.png" alt="">
                         </div>
                     </div>
                     
@@ -113,7 +112,7 @@ sideBar();
                             $100
                         </span>
                         <div class="pItem_status">
-                            <img src="img/check.png" alt="">
+                            <img src="/assetsCabinet/img/check.png" alt="">
                         </div>
                     </button>
                     <button class="programs_item pItemS">
@@ -121,7 +120,7 @@ sideBar();
                             $100
                         </span>
                         <div class="pItem_status">
-                            <img src="img/check.png" alt="">
+                            <img src="/assetsCabinet/img/check.png" alt="">
                         </div>
                     </button>
                     <button class="programs_item pItemS">
@@ -129,7 +128,7 @@ sideBar();
                             $100
                         </span>
                         <div class="pItem_status">
-                            <img src="img/check.png" alt="">
+                            <img src="/assetsCabinet/img/check.png" alt="">
                         </div>
                     </button>
                     <button class="programs_item pItemS">
@@ -137,7 +136,7 @@ sideBar();
                             $100
                         </span>
                         <div class="pItem_status">
-                            <img src="img/check.png" alt="">
+                            <img src="/assetsCabinet/img/check.png" alt="">
                         </div>
                     </button>
                     <button class="programs_item pItemS">
@@ -145,7 +144,7 @@ sideBar();
                             $100
                         </span>
                         <div class="pItem_status">
-                            <img src="img/check.png" alt="">
+                            <img src="/assetsCabinet/img/check.png" alt="">
                         </div>
                     </button>
                     <button class="programs_item pItemE">
@@ -153,7 +152,7 @@ sideBar();
                             $100
                         </span>
                         <div class="pItem_status">
-                            <img src="img/close.png" alt="">
+                            <img src="/assetsCabinet/img/close.png" alt="">
                         </div>
                     </button>
                     <button class="programs_item pItemE">
@@ -161,7 +160,7 @@ sideBar();
                             $100
                         </span>
                         <div class="pItem_status">
-                            <img src="img/close.png" alt="">
+                            <img src="/assetsCabinet/img/close.png" alt="">
                         </div>
                     </button>
                     <button class="programs_item pItemE">
@@ -169,7 +168,7 @@ sideBar();
                             $100
                         </span>
                         <div class="pItem_status">
-                            <img src="img/close.png" alt="">
+                            <img src="/assetsCabinet/img/close.png" alt="">
                         </div>
                     </button>
                     <button class="programs_item pItemE">
@@ -177,7 +176,7 @@ sideBar();
                             $100
                         </span>
                         <div class="pItem_status">
-                            <img src="img/close.png" alt="">
+                            <img src="/assetsCabinet/img/close.png" alt="">
                         </div>
                     </button>
                     <button class="programs_item pItemE">
@@ -185,7 +184,7 @@ sideBar();
                             $100
                         </span>
                         <div class="pItem_status">
-                            <img src="img/close.png" alt="">
+                            <img src="/assetsCabinet/img/close.png" alt="">
                         </div>
                     </button>
                 </div>

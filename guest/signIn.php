@@ -14,8 +14,8 @@ top('Sign In');
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="signIn_card_input">
-                    <span>Логин</span>
-                    <input type="text" id="logIn">
+                    <span>E-Mail</span>
+                    <input type="text" id="EMail">
                 </div>
                 <div class="signIn_card_input">
                     <span>Пароль</span>
@@ -26,7 +26,7 @@ top('Sign In');
                     <input type="text" placeholder="<? questionShow() ?>" id="question">
                 </div>
                 <div class="signIn_card_btn">
-                    <button class="btnMain" onclick="postQuery('gForm', 'login', 'logIn.password.question')">
+                    <button class="btnMain" onclick="postQuery('gForm', 'login', 'EMail.password.question')">
                         Войти
                     </button>
                 </div>

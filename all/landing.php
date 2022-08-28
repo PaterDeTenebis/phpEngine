@@ -25,15 +25,26 @@ top('Landing Page');
                             <a class="nav-link" href="#contacts">Контакты</a>
                         </li>
                     </ul>
-                    <div class="headAuth">
-                        <a class="headAuth_item" href="/signIn">
-                            Авторизация
-                        </a>
-                        <a class="headAuth_item" href="/register">
-                            Регистрация
-                        </a>
-                    </div>
-
+                    <? 
+                        if($_SESSION['id']) {
+                            echo '
+                                <div class="headAuth">
+                                    <a class="headAuth_item" href="/profile">
+                                        Кабинет
+                                    </a>
+                                </div>';
+                        } else {
+                            echo '
+                                <div class="headAuth">
+                                    <a class="headAuth_item" href="/signIn">
+                                        Авторизация
+                                    </a>
+                                    <a class="headAuth_item" href="/register">
+                                        Регистрация
+                                    </a>
+                                </div>';
+                        }
+                    ?>
                 </div>
             </nav>
         </header>

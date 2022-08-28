@@ -4,8 +4,8 @@ if ($_POST['login_f']) {
     //questionValidator();
     emailValidator();
     passwordValidator();
-    if (!mysqli_num_rows(mysqli_query($conn, "SELECT `id` FROM `users` WHERE `mail` = '$_POST[EMail]'"))) {
-        message('This E-mail does not exist in our database.');
+    if (!mysqli_num_rows(mysqli_query($conn, "SELECT `id` FROM `users` WHERE `mail` = '$_POST[EMail]' AND `pass` = '$_POST[password]'"))) {
+        message('Wrong E-mail or password.');
     } else {
         $row = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `users` WHERE `mail` = '$_POST[EMail]'"));
         foreach ($row as $key => $value) {
