@@ -31,6 +31,7 @@ if ($_POST['login_f']) {
         mail($_POST['EMail'], 'Registraion', "Here is a code to confirm your registraion: $code");
         go('confirm');
     }
+    
 } else if ($_POST['recovery_f']) {
     emailValidator();
     if (!mysqli_num_rows(mysqli_query($conn, "SELECT `id` FROM `users` WHERE `mail` = '$_POST[EMail]'"))) {

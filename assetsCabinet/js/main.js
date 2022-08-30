@@ -52,5 +52,9 @@ $('.tableMore').click(function() {
 //     clearInterval(x);
 //     document.getElementById("demo").innerHTML = "EXPIRED";
 //   }
+<<<<<<< HEAD
 // }, 1000);
 
+=======
+// }, 1000);
+>>>>>>> e3d9d1a (history in process)
