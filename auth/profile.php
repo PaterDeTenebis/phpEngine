@@ -1,7 +1,7 @@
 <?php
 include 'constructor/templateCabinet.php';
 
-top('Cabinet|Control Panel');
+top('Cabinet | Control Panel');
 ?>
     <main class="main">
         <header>

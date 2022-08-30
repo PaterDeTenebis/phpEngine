@@ -15,7 +15,7 @@ function top($title)
             <body>
                 <aside class="sidebar">
                     <div class="logo">
-                        <a href="#"><img src="/assetsCabinet/img/logo.png" alt="logo"></a>
+                        <a href="/"><img src="/assetsCabinet/img/logo.png" alt="logo"></a>
                         <button class="sbCloser"><i class="fas fa-times"></i></button>
                     </div>
                     <div class="sidebar_menu">
@@ -24,7 +24,7 @@ function top($title)
                         </div>
                         <div class="sidebar_menu_item">
                             <div class="sidebar_menu_item_img"><img src="/assetsCabinet/img/options.png" alt="options"></div>
-                            <div class="sidebar_menu_item_text"><a href="#" >Панель управления</a></div>
+                            <div class="sidebar_menu_item_text"><a href="/profile">Панель управления</a></div>
                         </div>
                         <div class="sidebarDrop">
                             <div class="sidebar_menu_item ">
@@ -37,6 +37,10 @@ function top($title)
                                 <li><a href="#">Перевод</a></li>
                                 <li><a href="#">Вывод</a></li>
                             </ul>
+                        </div>
+                        <div class="sidebar_menu_item">
+                            <div class="sidebar_menu_item_img"><img src="/assetsCabinet/img/user.png" alt="user"></div>
+                            <div class="sidebar_menu_item_text"><a href="/history">History</a></div>
                         </div>
                         <div class="sidebar_menu_item">
                             <div class="sidebar_menu_item_img"><img src="/assetsCabinet/img/user.png" alt="user"></div>
@@ -65,5 +69,6 @@ function bottom()
                 <script src="assetsCabinet/js/bootstrap.min.js"></script>
                 <script src="/assetsCabinet/js/fontawesome-all.min.js"></script>
                 <script src="/assetsCabinet/js/main.js"></script>
+                <script src="/assetsCabinet/js/func.js"></script>
         <html>';
 }
