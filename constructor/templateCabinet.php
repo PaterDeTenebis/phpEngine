@@ -44,11 +44,11 @@ function top($title)
                         </div>
                         <div class="sidebar_menu_item">
                             <div class="sidebar_menu_item_img"><img src="/assetsCabinet/img/user.png" alt="user"></div>
-                            <div class="sidebar_menu_item_text"><a href="#" >Профиль</a></div>
+                            <div class="sidebar_menu_item_text"><a href="/settings" >Профиль</a></div>
                         </div>
                         <div class="sidebar_menu_item">
                             <div class="sidebar_menu_item_img"><img src="/assetsCabinet/img/log-out.png" alt="log out"></div>
-                            <div class="sidebar_menu_item_text"><a href="#" >Выход</a></div>
+                            <div class="sidebar_menu_item_text"><a href="/logout" >Выход</a></div>
                         </div>
                     </div>
                     <div class="tgChannel_sb">
@@ -66,9 +66,11 @@ function bottom()
                 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
                 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-                <script src="assetsCabinet/js/bootstrap.min.js"></script>
+                <script src="/assetsCabinet/js/bootstrap.min.js"></script>
                 <script src="/assetsCabinet/js/fontawesome-all.min.js"></script>
+                <script src="/assetsCabinet/js/jquery.js"></script>
                 <script src="/assetsCabinet/js/main.js"></script>
                 <script src="/assetsCabinet/js/func.js"></script>
+                <script src="/ajax/ajaxSignIn.js"></script>
         <html>';
 }
