@@ -39,6 +39,10 @@ function top($title)
                             </ul>
                         </div>
                         <div class="sidebar_menu_item">
+                            <div class="sidebar_menu_item_img"><img src="/assetsCabinet/img/options.png" alt="options"></div>
+                            <div class="sidebar_menu_item_text"><a href="/referals">Referals</a></div>
+                        </div>
+                        <div class="sidebar_menu_item">
                             <div class="sidebar_menu_item_img"><img src="/assetsCabinet/img/user.png" alt="user"></div>
                             <div class="sidebar_menu_item_text"><a href="/history">History</a></div>
                         </div>

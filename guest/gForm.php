@@ -51,7 +51,12 @@ if ($_POST['login_f']) {
         if ($_SESSION['confirm']['code'] != $_POST['code']) {
             message('Wrong confirmation code entered.');
         } else {
-            $query = 'INSERT INTO `users` (`login`, `pass`, `mail`) VALUES ("' . htmlspecialchars($_SESSION['confirm']['login']) . '", "' . htmlspecialchars($_SESSION['confirm']['password']) . '", "' . htmlspecialchars($_SESSION['confirm']['email'])  . '")';
+            if(is_numeric($_COOKIE['ref'])) {
+                $ref = $_COOKIE['ref'];
+            } else {
+                $ref = 0;
+            }
+            $query = 'INSERT INTO `users` (`login`, `pass`, `mail`, `ref`) VALUES ("' . htmlspecialchars($_SESSION['confirm']['login']) . '", "' . htmlspecialchars($_SESSION['confirm']['password']) . '", "' . htmlspecialchars($_SESSION['confirm']['email'])  . '", '.$ref.')';
             mysqli_query($conn, $query);
             unset($_SESSION['confirm']);
             go('signIn');

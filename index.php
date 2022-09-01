@@ -1,4 +1,10 @@
 <?php
+
+if(is_numeric($_GET['ref'])) {
+    setcookie('ref', $_GET['ref'], strtotime('+1 month'));
+    header('location: /');
+}
+
 if ($_SERVER['REQUEST_URI'] == '/') {
     $page = 'landing';
 } else {
@@ -8,6 +14,8 @@ if ($_SERVER['REQUEST_URI'] == '/') {
     }
 }
 
+
+
 $conn = mysqli_connect('localhost', 'serg', 'gK3gW2kE', 'testserg');
 
 if(!$conn) {
@@ -15,6 +23,7 @@ if(!$conn) {
 }
 
 session_start();
+
 
 
 if (file_exists('all/' . $page . '.php')) {

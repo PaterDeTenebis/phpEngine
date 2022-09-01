@@ -30,7 +30,7 @@ top('Cabinet | Control Panel');
                                 <div class="cardPack_top">
                                     <span class="textSmall textSecondary">Реферальная ссылка:</span>
                                 </div>
-                                <span class="textComon textLight">fsffdfsdf.com</span>
+                                <span class="textComon textLight">testserg.icreate.vision?ref=<?=$_SESSION['id']?></span>
                             </div>
                             <button class="copy">
                                 <i class="fas fa-copy"></i>
