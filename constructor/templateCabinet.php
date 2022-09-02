@@ -33,9 +33,9 @@ function top($title)
                                 
                             </div>
                             <ul class="sidebar_menu_item_list">
-                                <li><a href="#">Пополнение</a></li>
+                                <li><a href="/replen">Пополнение</a></li>
                                 <li><a href="#">Перевод</a></li>
-                                <li><a href="#">Вывод</a></li>
+                                <li><a href="/withdraw">Вывод</a></li>
                             </ul>
                         </div>
                         <div class="sidebar_menu_item">

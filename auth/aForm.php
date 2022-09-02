@@ -26,4 +26,29 @@ if ($_POST['edit_f']) {
         }
         message('Data successfully updated');
     }
+} else if (($_POST['withdraw_f'])) {
+    if ($_POST['wSumm'] > 0) {
+        // tron network script...
+        $summ = $_POST['wSumm'];
+        mysqli_query($conn, "UPDATE `users_finance` SET `usd_balance` = `usd_balance` - '$summ' WHERE user_id = '$_SESSION[id]'");
+        message("Success $summ $ was withdrawed from your wallet");
+    } else {
+        message('Wrong amount entered');
+    }
+} else if (($_POST['replen_f'])) {
+    if ($_POST['wSumm'] > 0) {
+        $summ = $_POST['wSumm'];
+        $refSumm = $summ * (5 / 100);
+        mysqli_query($conn, "UPDATE `users_finance` SET `usd_balance` = `usd_balance` + '$summ' WHERE user_id = '$_SESSION[id]'");
+        mysqli_query($conn, "UPDATE `users_finance` SET `usd_gaveref` = `usd_gaveref` + '$refSumm' WHERE user_id = '$_SESSION[id]'");
+        $referral = mysqli_query($conn, "SELECT `ref` FROM `users_finance` WHERE user_id = '$_SESSION[id]'");
+        $row        = mysqli_fetch_array($referral);
+        $refId        = $row['ref'];
+        mysqli_query($conn, "UPDATE `users_finance` SET `usd_balance` = `usd_balance` + '$refSumm' WHERE user_id = '$refId'");
+        mysqli_query($conn, "UPDATE `users_finance` SET `usd_receiveref` = `usd_receiveref` + '$refSumm' WHERE user_id = '$refId'");
+
+        message("Success $summ $ was added to your wallet");
+    } else {
+        message('Wrong amount entered');
+    }
 }

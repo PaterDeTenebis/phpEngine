@@ -31,7 +31,6 @@ if ($_POST['login_f']) {
         mail($_POST['EMail'], 'Registraion', "Here is a code to confirm your registraion: $code");
         go('confirm');
     }
-    
 } else if ($_POST['recovery_f']) {
     emailValidator();
     if (!mysqli_num_rows(mysqli_query($conn, "SELECT `id` FROM `users` WHERE `mail` = '$_POST[EMail]'"))) {
@@ -51,13 +50,18 @@ if ($_POST['login_f']) {
         if ($_SESSION['confirm']['code'] != $_POST['code']) {
             message('Wrong confirmation code entered.');
         } else {
-            if(is_numeric($_COOKIE['ref'])) {
+            if (is_numeric($_COOKIE['ref'])) {
                 $ref = $_COOKIE['ref'];
             } else {
                 $ref = 0;
             }
-            $query = 'INSERT INTO `users` (`login`, `pass`, `mail`, `ref`) VALUES ("' . htmlspecialchars($_SESSION['confirm']['login']) . '", "' . htmlspecialchars($_SESSION['confirm']['password']) . '", "' . htmlspecialchars($_SESSION['confirm']['email'])  . '", '.$ref.')';
+            $query = 'INSERT INTO `users` (`login`, `pass`, `mail`, `ref`) VALUES ("' . htmlspecialchars($_SESSION['confirm']['login']) . '", "' . htmlspecialchars($_SESSION['confirm']['password']) . '", "' . htmlspecialchars($_SESSION['confirm']['email'])  . '", ' . $ref . ')';
             mysqli_query($conn, $query);
+            $get_pass = mysqli_query($conn, "SELECT `id`, `login` FROM `users` WHERE `id` = LAST_INSERT_ID()");
+            $row		= mysqli_fetch_array($get_pass);
+            $id			= $row['id'];
+            $login	    = htmlspecialchars($row['login']);
+            mysqli_query($conn, 'INSERT INTO `users_finance` (`user_id`, `login`, `ref`) VALUES ("' . $id . '", "' . $login . '", ' . $ref . ')');
             unset($_SESSION['confirm']);
             go('signIn');
         }

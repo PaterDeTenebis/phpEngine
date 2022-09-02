@@ -1,4 +1,5 @@
 <?
+// в assetsCabinet/js/func.js обработчик этого лоадера
 $query = mysqli_query($conn, 'SELECT * FROM `history` ORDER BY `id` LIMIT ' . $_SESSION['loader'] . ', 2');
 if (!mysqli_num_rows($query)) {
     if ($_SESSION['loader'] == 0) {
@@ -23,3 +24,4 @@ if (!mysqli_num_rows($query)) {
               </tr>';
     }
 }
+
