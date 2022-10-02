@@ -6,20 +6,23 @@ if ($_POST['login_f']) {
     passwordValidator();
     if (!mysqli_num_rows(mysqli_query($conn, "SELECT `id` FROM `users` WHERE `mail` = '$_POST[EMail]' AND `pass` = '$_POST[password]'"))) {
         message('Wrong E-mail or password.');
-    } else {
+    }
+    else {
         $row = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `users` WHERE `mail` = '$_POST[EMail]'"));
         foreach ($row as $key => $value) {
             $_SESSION[$key] = $value;
         }
         go('profile');
     }
-} else if ($_POST['register_f']) {
+}
+else if ($_POST['register_f']) {
     emailValidator();
     passwordValidator();
     //questionValidator();
     if (mysqli_num_rows(mysqli_query($conn, "SELECT `id` FROM `users` WHERE `mail` = '$_POST[EMail]'"))) {
         message('This E-mail already exist in our database.');
-    } else {
+    }
+    else {
         $code = random_str(8);
         $_SESSION['confirm'] = array(
             'type' => 'register',
@@ -31,11 +34,13 @@ if ($_POST['login_f']) {
         mail($_POST['EMail'], 'Registraion', "Here is a code to confirm your registraion: $code");
         go('confirm');
     }
-} else if ($_POST['recovery_f']) {
+}
+else if ($_POST['recovery_f']) {
     emailValidator();
     if (!mysqli_num_rows(mysqli_query($conn, "SELECT `id` FROM `users` WHERE `mail` = '$_POST[EMail]'"))) {
         message('This E-mail does not exist in our database.');
-    } else {
+    }
+    else {
         $code = random_str(8);
         $_SESSION['confirm'] = array(
             'type' => 'recovery',
@@ -45,37 +50,43 @@ if ($_POST['login_f']) {
         mail($_POST['EMail'], 'Password Recovery', "Here is a code to confirm your password recovery: $code");
         go('confirm');
     }
-} else if ($_POST['confirm_f']) {
+}
+else if ($_POST['confirm_f']) {
     if ($_SESSION['confirm']['type'] == 'register') {
         if ($_SESSION['confirm']['code'] != $_POST['code']) {
             message('Wrong confirmation code entered.');
-        } else {
+        }
+        else {
             if (is_numeric($_COOKIE['ref'])) {
                 $ref = $_COOKIE['ref'];
-            } else {
+            }
+            else {
                 $ref = 0;
             }
-            $query = 'INSERT INTO `users` (`login`, `pass`, `mail`, `ref`) VALUES ("' . htmlspecialchars($_SESSION['confirm']['login']) . '", "' . htmlspecialchars($_SESSION['confirm']['password']) . '", "' . htmlspecialchars($_SESSION['confirm']['email'])  . '", ' . $ref . ')';
+            $query = 'INSERT INTO `users` (`login`, `pass`, `mail`, `ref`) VALUES ("' . htmlspecialchars($_SESSION['confirm']['login']) . '", "' . htmlspecialchars($_SESSION['confirm']['password']) . '", "' . htmlspecialchars($_SESSION['confirm']['email']) . '", ' . $ref . ')';
             mysqli_query($conn, $query);
             $get_pass = mysqli_query($conn, "SELECT `id`, `login` FROM `users` WHERE `id` = LAST_INSERT_ID()");
-            $row		= mysqli_fetch_array($get_pass);
-            $id			= $row['id'];
-            $login	    = htmlspecialchars($row['login']);
+            $row = mysqli_fetch_array($get_pass);
+            $id = $row['id'];
+            $login = htmlspecialchars($row['login']);
             mysqli_query($conn, 'INSERT INTO `users_finance` (`user_id`, `login`, `ref`) VALUES ("' . $id . '", "' . $login . '", ' . $ref . ')');
             unset($_SESSION['confirm']);
             go('signIn');
         }
-    } else if ($_SESSION['confirm']['type'] == 'recovery') {
+    }
+    else if ($_SESSION['confirm']['type'] == 'recovery') {
         if ($_SESSION['confirm']['code'] != $_POST['code']) {
             message('Wrong confirmation code entered.');
-        } else {
+        }
+        else {
             $newPass = random_str(10);
-            $query = 'UPDATE `users` SET `pass` = "' . md5($newPass) . '" WHERE `mail` = "' . htmlspecialchars($_SESSION['confirm']['email'])  . '"';
+            $query = 'UPDATE `users` SET `pass` = "' . md5($newPass) . '" WHERE `mail` = "' . htmlspecialchars($_SESSION['confirm']['email']) . '"';
             mysqli_query($conn, $query);
             unset($_SESSION['confirm']);
             message("Your new password: $newPass");
         }
-    } else {
+    }
+    else {
         notFound();
     }
 }
